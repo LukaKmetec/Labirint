@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;   
+    align-items: center;     
+    height: 100%;             
+    position: relative;        
+    overflow: hidden;
+}
+.image {
+    background: url(img/backg.jpg) center center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    position: absolute;       
+    top: 0;
+    left: 0;
+    z-index: 0;   
+}
+
+.labirint {
+    display: flex;
+    z-index: 1;
+    position: relative;        
+    width: 484px;              
+    height: 484px; 
+}
+
+#canvas {
+    position: absolute;
+    z-index: 10;               
+    width: 100%;
+    height: 100%;
+}
+.mazeholder img {
+    width: 100%;               
+    height: 100%;              
+    position: relative;
+}
+.gumbi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#gumb{
+    height: 20px;
+    width: 32px;
+}
+.steph{
+    height: 10%;
+    width: 7%;
+
+}

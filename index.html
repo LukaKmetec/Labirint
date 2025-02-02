@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/style.css">
-<html>
-    <head>
-        <title>Labirint</title>
-    </head>
-    <body>
-        <div id="ozadje">
-            <div id="steph"><img width="5%" height="10%" src="img/steph.png"></div>
-            <div id="labirint">
-                <canvas width="484px" height="484px" id="canvas"></canvas>
-                <img src="img/30 by 30 orthogonal maze.svg">
-                <div id="kos"><img width="10%" height="100%" src="img/basket.jpg"></div>
-            </div>
-            <div id="buttn">
-                <button type="button" id="start">Začni</button>
-                <button type="button" id="pobrisi">Pobriši</button>
-            </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Labirint</title>
+</head>
+
+<body>
+    
+    <div class="image"></div>
+    <div class="steph"><img height="10%" width="7%" src="img/steph.png"></div>
+    <div class="labirint">
+        
+        <canvas width="484" height="484" id="canvas"></canvas>
+        
+
+        <img src="img/30 by 30 orthogonal maze.svg">
+        <div class="gumbi">
+            <button id="startaj" onclick="draw()">Start</button>
+            <button id="resetiraj" onclick="resetiraj()">Reset</button>
         </div>
-    </body>
-    <script src="js/javascript.js"></script>
+        
+    </div>
+
+
+</body>
+<script src="js/script.js"></script>
+
 </html>
