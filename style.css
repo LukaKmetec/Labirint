@@ -29,21 +29,16 @@ body{
     z-index: 0;   
 }
 
-.gumbiGlavno{
-    margin-left: auto;
-    align-items: center;
-    justify-items: center;
-    width: 200px;
+.glavno{
+    width: 684px;
     height: 484px;
-    border-radius: 10px;
-    position: relative;
-    border: darkgray solid 2px;
-    background-color: lightgray;
+    align-self: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .labirint {
     z-index: 1;
-    margin: auto;
     position: fixed;            
     width: 484px;              
     height: 484px; 
@@ -63,16 +58,19 @@ body{
 }
 
 .gumbi{
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
     position: relative;
-    width: 199px;
+    width: 200px;
+    height: 484px;
     display: flex;
+    align-self: center;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
+    float: right;
 }
 .gumb{
-    margin-left: 10%;
+    margin-left: 20px;
     height: 30px;
     width: 60px;
     font-size: 16px;
@@ -80,7 +78,7 @@ body{
     border: none;
     font-family:Tahoma, sans-serif;
 }
-.steph{
+.lebron{
     height: 10%;
     width: 7%;
 

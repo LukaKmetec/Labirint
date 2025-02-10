@@ -56,9 +56,9 @@ function risi() {
         resetCanvas();
         document.getElementById("resetiraj").disabled = true;
         interval = setInterval(drawSegment, 100);
-        risi();
     });
 }
+risi();
 
 function resetiraj(){
     const canvas = document.getElementById("canvas");
