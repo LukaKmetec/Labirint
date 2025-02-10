@@ -1,9 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let x = 0;
-    let y = 1;
-    let animating = false;
-    let currentProgress = 0;
-    const speed = 5;
+function risi() {
+    let x = 0, y = 1;
+    const speed = 10; 
     const points = [
         234, 2, 234, 10, 218, 10, 218, 26, 186, 26, 186, 10, 154, 10, 154, 58, 138, 58, 138, 42,
         122, 42, 122, 58, 106, 58, 106, 90, 74, 90, 74, 106, 90, 106, 90, 154, 106, 154, 106, 106,
@@ -27,65 +24,42 @@ document.addEventListener("DOMContentLoaded", () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         x = 0;
         y = 1;
-        currentProgress = 0;
     };
 
-    const drawSegment = (startX, startY, endX, endY, progress) => {
-        const interpolatedX = startX + (endX - startX) * progress;
-        const interpolatedY = startY + (endY - startY) * progress;
-
-        ctx.beginPath();
-        ctx.moveTo(startX, startY);
-        ctx.lineTo(interpolatedX, interpolatedY);
-        ctx.strokeStyle = "rgb(255,255,0)";
-        ctx.lineWidth = 7;
-        ctx.stroke();
-        ctx.closePath();
-        
-
-        ctx.fillStyle = "rgb(255,255,0)";
-        ctx.fillRect(startX - ctx.lineWidth / 2, startY - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
-    };
-
-    const risi = () => {
+    const drawSegment = () => {
         if (x < points.length - 2) {
             const startX = points[x];
             const startY = points[y];
             const endX = points[x + 2];
             const endY = points[y + 2];
 
-            const segmentLength = Math.sqrt((endX - startX) ** 2 + (endY - startY) ** 2);
-            currentProgress += speed / segmentLength;
+            
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+            ctx.strokeStyle = "rgb(255, 255, 0)";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            ctx.closePath();
 
-            if (currentProgress > 1) currentProgress = 1;
-
-            drawSegment(startX, startY, endX, endY, currentProgress);
-
-            if (currentProgress >= 1) {
-                x += 2;
-                y += 2;
-                currentProgress = 0;
-            }
-
-            requestAnimationFrame(risi);
+            x += 2;
+            y += 2;
         } else {
-            const lastX = points[x];
-            const lastY = points[y];
-            ctx.fillStyle = "rgb(255,255,0)";
-            ctx.fillRect(lastX - ctx.lineWidth / 2, lastY - ctx.lineWidth / 2, ctx.lineWidth, ctx.lineWidth);
-            animating = false;
+            clearInterval(interval);
+            document.getElementById("resetiraj").disabled = false;
         }
     };
 
+    let interval;
+
     document.getElementById("startaj").addEventListener("click", () => {
         resetCanvas();
-
-        if (!animating) {
-            animating = true;
-            risi();
-        }
+        document.getElementById("resetiraj").disabled = true;
+        interval = setInterval(drawSegment, 100);
+        risi();
     });
-});
+}
+
 function resetiraj(){
     const canvas = document.getElementById("canvas");
     const ctx = canvas.getContext("2d");

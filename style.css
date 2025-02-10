@@ -29,10 +29,22 @@ body{
     z-index: 0;   
 }
 
+.gumbiGlavno{
+    margin-left: auto;
+    align-items: center;
+    justify-items: center;
+    width: 200px;
+    height: 484px;
+    border-radius: 10px;
+    position: relative;
+    border: darkgray solid 2px;
+    background-color: lightgray;
+}
+
 .labirint {
-    display: flex;
     z-index: 1;
-    position: relative;        
+    margin: auto;
+    position: fixed;            
     width: 484px;              
     height: 484px; 
 }
@@ -43,20 +55,30 @@ body{
     width: 100%;
     height: 100%;
 }
+
 .mazeholder img {
     width: 100%;               
     height: 100%;              
     position: relative;
 }
+
 .gumbi{
+    position: relative;
+    width: 199px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
 }
-#gumb{
-    height: 20px;
-    width: 32px;
+.gumb{
+    margin-left: 10%;
+    height: 30px;
+    width: 60px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    font-family:Tahoma, sans-serif;
 }
 .steph{
     height: 10%;
