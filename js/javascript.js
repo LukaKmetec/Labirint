@@ -25,7 +25,9 @@ function risi() {
         x = 0;
         y = 1;
     };
-
+    const brisiCanvas = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
     const drawSegment = () => {
         if (x < points.length - 2) {
             const startX = points[x];
@@ -35,6 +37,7 @@ function risi() {
 
             
             ctx.beginPath();
+            brisiCanvas();
             ctx.moveTo(startX, startY);
             ctx.lineTo(endX, endY);
             ctx.strokeStyle = "rgb(255, 255, 0)";
@@ -46,6 +49,7 @@ function risi() {
             y += 2;
         } else {
             clearInterval(interval);
+            brisiCanvas();
             document.getElementById("resetiraj").disabled = false;
         }
     };
@@ -59,9 +63,11 @@ function risi() {
     });
 }
 risi();
-
+let x=0, y=1;
 function resetiraj(){
-    const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-};
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function risbrisi(){
+
+}

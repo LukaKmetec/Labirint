@@ -30,7 +30,7 @@ body{
 }
 
 .glavno{
-    width: 684px;
+    width: 484px;
     height: 484px;
     align-self: center;
     justify-content: center;
@@ -58,9 +58,6 @@ body{
 }
 
 .gumbi{
-    top: 0px;
-    bottom: 0px;
-    margin: auto;
     position: relative;
     width: 200px;
     height: 484px;
