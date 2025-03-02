@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/lebron.png">
+    <link rel="icon" type="image/x-icon" href="img/labyrinth.png">
     <link rel="stylesheet" href="style.css">
     <title>Labirint</title>
 </head>
 
 <body>
-    
+    <div></div>
     <div class="image"></div>
     <div class="glavno">
     <div class="labirint">
         
         <canvas width="484" height="484" id="canvas"></canvas>
         
-
         <img src="img/30 by 30 orthogonal maze.svg">
         
-        
     </div>
-    
+        <div class="gumbi">
+            <button class="gumb" id="startaj" onclick="risi()">Start</button>
+            <button class="gumb" id="risibrisi" onclick="risibrisi()">Risi delcek</button>
+            <button class="gumb" id="resetiraj" onclick="resetiraj()">Reset</button>
+            <div class="slidecontainer">
+                <p class="sredina">Hitrost:</p>
+                <p class="levo">Počasi</p>
+                <p class="desno">Hitro</p>
+                <input  type="range" min="0" max="5" value="2,5" step="any" class="slider" id="slider" oninput="hitrost()">
+            </div>
+        </div>
     </div>
-    <div class="gumbi">
-        <button class="gumb" id="startaj" onclick="risi()">Start</button>
-        <button class="gumb" id="resetiraj" onclick="resetiraj()">Reset</button>
-        
-    </div>
-    
-    
-
-
 </body>
-    <script src="js/javascript.js"></script>
+    <script src="js/javascript1.js"></script>
 </html>
