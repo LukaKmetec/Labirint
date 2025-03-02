@@ -35,7 +35,6 @@ function risi(){
             const endY = points[y + 2];
             
             speed=hitrost();
-            console.log(speed);
             clearInterval(interval)
             interval = setInterval(draw, speed);
             ctx.beginPath();
@@ -105,6 +104,9 @@ function risibrisi(){
             const endX = points[x + 2];
             const endY = points[y + 2];
 
+            speed=hitrost();
+            clearInterval(interval)
+            interval = setInterval(draw, speed);
             ctx.beginPath();
             ctx.moveTo(startX, startY);
             brisi();
@@ -143,7 +145,7 @@ function resetiraj(){
 var slider = document.getElementById("slider");
 var c=0;
 function hitrost(){
-    var x=Math.ceil(slider.value);
+    var x=(slider.value);
     c=175;
     c=300-x*50;
     return c;
