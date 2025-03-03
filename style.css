@@ -121,3 +121,8 @@ body{
 .credit{
     text-align: center;
 }
+
+.naslov{
+    text-align: center;
+    padding-top: 10px;
+}
