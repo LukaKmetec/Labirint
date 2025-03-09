@@ -32,7 +32,7 @@ body{
 
 .glavno{
     width: 684px;
-    height: 484px;
+    height: 540px;
     align-self: center;
     justify-content: center;
     margin: auto;
@@ -106,23 +106,29 @@ body{
     text-align: center;
     width: 100%;
     display: block;
+    color: white;
 }
 
 .levo{
     float: left;
     margin-bottom: 0px;
+    color: white;
 }
 
 .desno{
     float: right;
     margin-bottom: 0px;
+    color: white;
 }
 
 .credit{
     text-align: center;
+    color: white;
 }
 
 .naslov{
     text-align: center;
     padding-top: 10px;
+    font-size: 40px;
+    color: white;
 }
