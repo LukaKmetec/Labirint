@@ -38,8 +38,8 @@ function risi(){
             clearInterval(interval)
             interval = setInterval(draw, speed);
             ctx.beginPath();
-            ctx.moveTo(startX, startY + 56);
-            ctx.lineTo(endX, endY + 56);
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
             ctx.strokeStyle = "rgb(255, 255, 0)";
             ctx.lineWidth = 5;
             ctx.stroke();
